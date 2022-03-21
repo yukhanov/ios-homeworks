@@ -9,14 +9,10 @@ import UIKit
 
 class ProfileView: UIView {
 
-  
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var birthDateLabel: UILabel!
-    
     @IBOutlet weak var cityLabel: UILabel!
-    
     @IBOutlet weak var decriptionLabel: UITextView!
     
     override init(frame: CGRect) {
