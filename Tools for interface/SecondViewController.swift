@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SecondViewController.swift
 //  Tools for interface
 //
 //  Created by Сергей Юханов on 22.03.2022.
@@ -7,21 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
-        setupNavigationBar()
+        view.backgroundColor = .systemBlue
 
         // Do any additional setup after loading the view.
     }
     
-    func setupNavigationBar() {
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Заголовок"
-    }
 
     /*
     // MARK: - Navigation
