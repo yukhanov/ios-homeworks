@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ProfileViewController.swift
 //  Tools for interface
 //
 //  Created by Сергей Юханов on 22.03.2022.
@@ -7,28 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    let feedVC = FeedViewController()
+class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .white
-        setupNavigationBar()
-        
-        addChild(feedVC)
-        feedVC.view.frame = view.frame
-        view.addSubview(feedVC.view)
 
         // Do any additional setup after loading the view.
     }
     
-    func setupNavigationBar() {
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Заголовок"
-        navigationItem.backButtonTitle = "Назад"
-    }
 
     /*
     // MARK: - Navigation

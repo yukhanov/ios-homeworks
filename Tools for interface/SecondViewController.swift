@@ -8,11 +8,16 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    let profileVC = ProfileViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemBlue
+        addChild(profileVC)
+        profileVC.view.frame = view.frame
+        view.addSubview(profileVC.view)
+        
 
         // Do any additional setup after loading the view.
     }

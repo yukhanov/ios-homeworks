@@ -21,6 +21,14 @@ class TabBarController: UITabBarController {
                 return "Профиль"
             }
         }
+        var image: UIImage? {
+            switch self {
+            case .feed:
+                return UIImage(systemName: "house")
+            case .profile:
+                return UIImage(systemName: "person.circle")
+            }
+        }
     }
 
     override func viewDidLoad() {
@@ -44,7 +52,7 @@ class TabBarController: UITabBarController {
            })
            self.viewControllers?.enumerated().forEach({ (index, vc) in
                vc.tabBarItem.title = items[index].title
-               //vc.tabBarItem.image = items[index].image
+               vc.tabBarItem.image = items[index].image
            })
        }
 }
