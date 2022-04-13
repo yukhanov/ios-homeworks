@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SecondViewController.swift
 //  Tools for interface
 //
 //  Created by Сергей Юханов on 22.03.2022.
@@ -7,28 +7,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SecondViewController: UIViewController {
     
-    let feedVC = FeedViewController()
+    let profileVC = ProfileViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
-        setupNavigationBar()
+        addChild(profileVC)
+        profileVC.view.frame = view.frame
+        view.addSubview(profileVC.view)
         
-        addChild(feedVC)
-        feedVC.view.frame = view.frame
-        view.addSubview(feedVC.view)
 
         // Do any additional setup after loading the view.
     }
     
-    func setupNavigationBar() {
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Заголовок"
-        navigationItem.backButtonTitle = "Назад"
-    }
 
     /*
     // MARK: - Navigation
