@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         view.backgroundColor = .white
         setupNavigationBar()
         
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
         view.addSubview(feedVC.view)
 
         // Do any additional setup after loading the view.
+
     }
     
     func setupNavigationBar() {

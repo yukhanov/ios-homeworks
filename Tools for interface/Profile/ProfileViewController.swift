@@ -18,10 +18,16 @@ class ProfileViewController: UIViewController {
         navigationItem.title = "Profile"
         
 
+
         view.backgroundColor = .gray
         view.addSubview(profileHeaderView)
         
+
+        
+
+
         // Do any additional setup after loading the view.
+
     }
     
     override func viewWillLayoutSubviews() {
