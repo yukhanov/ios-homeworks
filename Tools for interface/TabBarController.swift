@@ -47,7 +47,7 @@ class TabBarController: UITabBarController {
                case .feed:
                    return UINavigationController(rootViewController: ViewController())
                case .profile:
-                   return SecondViewController()
+                   return ProfileViewController()
                }
            })
            self.viewControllers?.enumerated().forEach({ (index, vc) in
