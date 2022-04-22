@@ -9,42 +9,54 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     
-    let profileHeaderView = ProfileHeaderView()
+    private let profileHeaderView: ProfileHeaderView = {
+        let view = ProfileHeaderView(frame: .zero)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    private let setTitleButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Set title", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = .blue
+        button.layer.cornerRadius = 4
+        button.addTarget(self, action: #selector(didTapSetTitleButton), for: .touchUpInside)
+        return button
+    }()
     
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Profile"
-        
-
-
         view.backgroundColor = .gray
+        
         view.addSubview(profileHeaderView)
-        
-
-        
-
-
-        // Do any additional setup after loading the view.
+        view.addSubview(setTitleButton)
+        setConstraints()
 
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        profileHeaderView.frame = view.frame
+    @objc func didTapSetTitleButton() {
+        print("Iam button")
+    }
+}
+
+extension ProfileViewController {
+    
+    func setConstraints() {
+        NSLayoutConstraint.activate([
+            profileHeaderView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            profileHeaderView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            profileHeaderView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            profileHeaderView.heightAnchor.constraint(equalToConstant: 220),
+            
+            setTitleButton.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            setTitleButton.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            setTitleButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
     }
     
-  
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
