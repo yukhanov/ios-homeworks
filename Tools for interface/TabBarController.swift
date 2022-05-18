@@ -34,6 +34,7 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         setupTabBar()
 
         // Do any additional setup after loading the view.
@@ -47,7 +48,7 @@ class TabBarController: UITabBarController {
                case .feed:
                    return UINavigationController(rootViewController: ViewController())
                case .profile:
-                   return ProfileViewController()
+                   return LogInViewController()
                }
            })
            self.viewControllers?.enumerated().forEach({ (index, vc) in
