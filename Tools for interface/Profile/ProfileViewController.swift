@@ -33,6 +33,7 @@ class ProfileViewController: UIViewController {
         navigationItem.title = "Profile"
         view.backgroundColor = .gray
         
+        
         view.addSubview(profileHeaderView)
         view.addSubview(setTitleButton)
         setConstraints()
